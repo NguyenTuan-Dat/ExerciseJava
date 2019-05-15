@@ -1,5 +1,5 @@
 public class PTTSNTVer2 {
-    public String PhanTich(long a){
+    public String phantich(long a){
         String s="";
         for(long i=2; i<a; i++){
             int dem=0;
