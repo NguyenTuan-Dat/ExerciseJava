@@ -1,5 +1,5 @@
 public class PTThuaSoNguyenTo {
-    public String PhanTich(long a){
+    public String phantich(long a){
         String s ="";
         for(int i=2;i<=a;i++){
             while(a%i==0){
