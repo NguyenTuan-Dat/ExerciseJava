@@ -1,5 +1,5 @@
 public class Sum {
-    public long SUM(long a)
+    public long sum(long a)
     {
         int x=0;
         while(a>0)
