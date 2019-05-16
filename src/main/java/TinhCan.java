@@ -1,6 +1,10 @@
 public class TinhCan {
-    public String can(double n){
-        double a=n/2/n+n/2;
-        return String.valueOf(a);
+    public String can(double a){
+        double f=a;
+        double can = Math.sqrt(a);
+        while(can-f>0.000001 || f-can>0.000001){
+            f=a/2/f+f/2;
+        }
+        return String.valueOf(f).substring(0,7);
     }
 }
