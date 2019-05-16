@@ -12,7 +12,7 @@ public class PTTSNTVer2 {
                 if (dem > 1) s += i + "^" + dem + " * ";
             }
         }
-        s=s.substring(0,s.length()-3);
+        s=s.substring(0, s.length()-3);
         return s;
     }
 }
