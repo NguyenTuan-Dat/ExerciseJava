@@ -7,7 +7,15 @@ public class PTBac2 {
             s="Phương trình vô nghiệm";
         }
         else{
-            s="x1= " + ((-1*b+Math.sqrt(delta))/2/a) + ", x2= " + ((-1*b-Math.sqrt(delta))/2/a);
+            if (delta==0){
+                double x= -b/2/a;
+                s= "x1=x2= " + x;
+            }
+            else {
+                double x1 = (-b + Math.sqrt(delta)) / 2 / a;
+                double x2 = (-b - Math.sqrt(delta)) / 2 / a;
+                s = "x1= " + x1 + ", x2= " + x2;
+            }
         }
 
         return s;
