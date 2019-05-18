@@ -1,5 +1,5 @@
 public class Tinhe {
-    public String tinhe(){
+    public double tinhe(){
         double e=2;
         long giaithua = 1;
         long i=2;
@@ -9,6 +9,7 @@ public class Tinhe {
             i++;
             e+=1.0/giaithua;
         }
-        return String.valueOf(e).substring(0,8);
+        //return String.valueOf(e).substring(0,8);
+        return e;
     }
 }
