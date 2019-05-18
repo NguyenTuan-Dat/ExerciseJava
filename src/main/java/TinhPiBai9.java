@@ -1,5 +1,5 @@
 public class TinhPiBai9 {
-    public String tinhpi(){
+    public double tinhpi(){
         double pi=0;
         int a=1;
         long i=1;
@@ -8,8 +8,6 @@ public class TinhPiBai9 {
             a *= -1;
             i+=2;
         }
-        String s= String.valueOf(pi);
-        s=s.substring(0,6);
-        return s;
+        return pi;
     }
 }
