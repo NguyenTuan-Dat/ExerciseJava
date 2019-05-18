@@ -7,7 +7,7 @@ public class Tinhe {
         while(Math.abs(E-e) > 0.000001){
             giaithua*=i;
             i++;
-            e+=1.0/giaithua;
+            e += 1.0 / giaithua;
         }
         //return String.valueOf(e).substring(0,8);
         return e;
