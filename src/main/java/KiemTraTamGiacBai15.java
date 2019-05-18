@@ -5,7 +5,7 @@ public class KiemTraTamGiacBai15 {
     public String kiemtra(double A[]) {
         String s = "";
         Arrays.sort(A);
-        if (A[0] + A[1] < A[2]) s = "Tam giác không hợp lệ";
+        if (A[0] + A[1] <= A[2]) s = "Tam giác không hợp lệ";
         else {
             double C = A[0] + A[1] + A[2];
             double p = C / 2;

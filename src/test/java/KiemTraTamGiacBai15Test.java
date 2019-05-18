@@ -13,5 +13,7 @@ public class KiemTraTamGiacBai15Test {
         Assert.assertEquals(new KiemTraTamGiacBai15().kiemtra(C), "S=5.562148865321747, C=15.0, tam giác là tam giác bình thường");
         double D[]={1,6,7};
         Assert.assertEquals(new KiemTraTamGiacBai15().kiemtra(D), "Tam giác không hợp lệ");
+        double E[]={5,6,6};
+        Assert.assertEquals(new KiemTraTamGiacBai15().kiemtra(E), "S=13.635890143294644, C=17.0, tam giác là tam giác cân");
     }
 }
