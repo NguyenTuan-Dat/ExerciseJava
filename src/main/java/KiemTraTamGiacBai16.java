@@ -16,21 +16,21 @@ public class KiemTraTamGiacBai16 {
         if (A[0] + A[1] <= A[2]) {
             return new String("Tam giác không hợp lệ");
         } else {
-            String s = "";
+            String result = "";
             double C = A[0] + A[1] + A[2];
             double p = C / 2;
             double area = Math.sqrt(p * (p - A[0]) * (p - A[1]) * (p - A[2]));
-            s = "S=" + area + ", C=" + C + ", tam giác là tam giác";
+            result = "S=" + area + ", C=" + C + ", tam giác là tam giác";
             if (A[2] * A[2] == A[0] * A[0] + A[1] * A[1]) {
-                s += " vuông";
+                result += " vuông";
             } else {
                 if (A[0] == A[1] || A[1] == A[2]) {
-                    s += " cân";
+                    result += " cân";
                 } else {
-                    s += " bình thường";
+                    result += " bình thường";
                 }
             }
-            return s;
+            return result;
         }
     }
 }
