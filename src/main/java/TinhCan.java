@@ -6,7 +6,7 @@ public class TinhCan {
         do {
             f1=f;
             f = a / 2 / f + f / 2;
-        }while(f1-f>0.00001);
+        } while(f1 - f > 0.00001);
         
         return f;
     }
