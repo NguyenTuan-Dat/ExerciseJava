@@ -23,7 +23,7 @@ public class TamGiacPascal {
     }
 
     public String tinh(int n) {
-        String s = "";
+        
         int a[] = {1};
         int dem = 1;
 
