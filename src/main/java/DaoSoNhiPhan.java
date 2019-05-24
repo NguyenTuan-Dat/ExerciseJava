@@ -4,7 +4,7 @@ public class DaoSoNhiPhan {
         long kq=0;
         
         while(n>0){
-            kq += kq * 2 + n % 2;
+            kq = kq * 2 + n % 2;
             n /= 2;
         }
         
