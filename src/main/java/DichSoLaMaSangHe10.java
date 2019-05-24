@@ -17,15 +17,13 @@ public class DichSoLaMaSangHe10 {
 
         }
 
-        for (int i = 0; i < s.length(); i++) {
-
-            if (a[i + 1] == a[i] * 5 || a[i] != 50 && a[i + 1] == a[i] * 10) {
+        for (int i = 0; i < s.length(); i++)
+            if (i<s.length()-1 && (a[i + 1] == a[i] * 5 || a[i + 1] == a[i] * 10)) {
                 result += a[i + 1] - a[i];
                 i++;
             } else {
                 result += a[i];
             }
-        }
 
         return result;
     }
