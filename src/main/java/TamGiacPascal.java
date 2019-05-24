@@ -25,9 +25,8 @@ public class TamGiacPascal {
     public String tinh(int n) {
         
         int a[] = {1};
-        int dem = 1;
 
-        while (dem++ < n) {
+        for(int i = 1; i < n; i++) {
             a = xuongdong(a);
         }
 
