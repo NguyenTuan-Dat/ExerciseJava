@@ -7,7 +7,7 @@ public class TimSoXuatHienTren2Lan {
         int dem = 0;
         Arrays.sort(a);
         for (int i = 0; i < a.length - 2; i++) {
-            if (a[i] == a[i + 1] && a[i] == a[i + 2]) {
+            if (a[i] == a[i + 1] && a[i] == a[i + 2] && a[i]!=b[dem]) {
                 b[dem++] = a[i];
                 i += 2;
             }
