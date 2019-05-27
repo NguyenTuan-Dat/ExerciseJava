@@ -4,8 +4,8 @@ public class KiemTraTamGiacBai16 {
 
     double dodai(double x1, double x2, double y1, double y2) {
 
-        double x = x1 - x2;
-        double y = y1 - y2;
+        double dx = x1 - x2;
+        double dy = y1 - y2;
 
         return Math.sqrt(x*x+y*y);
     }
@@ -24,8 +24,8 @@ public class KiemTraTamGiacBai16 {
 
         } else {
 
-            double C = a[0] + a[1] + a[2];
-            double p = C / 2;
+            double c = a[0] + a[1] + a[2];
+            double p = c / 2;
             double area = Math.sqrt(p * (p - a[0]) * (p - a[1]) * (p - a[2]));
 
             String result = "S=" + area + ", C=" + C + ", tam giác là tam giác";
