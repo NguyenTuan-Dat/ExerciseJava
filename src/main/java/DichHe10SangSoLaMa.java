@@ -8,7 +8,7 @@ public class DichHe10SangSoLaMa {
         String y[] = {"M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"};
         while (a > 0) {
 
-            while (a / x[i] >= 1) {
+            while (a >= x[i]) {
                     s += y[i];
                     a -= x[i];
                 }
