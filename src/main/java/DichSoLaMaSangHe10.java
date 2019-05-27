@@ -1,20 +1,22 @@
+import java.util.HashMap;
+
 public class DichSoLaMaSangHe10 {
 
     public int dich(String s) {
 
         int result = 0;
         int a[] = new int[s.length()];
+        HashMap<Character,Integer> map = new HashMap<>();
+        map.put('M',1000);
+        map.put('D',500);
+        map.put('C',100);
+        map.put('L',50);
+        map.put('X',10);
+        map.put('V',5);
+        map.put('I',1);
 
         for (int i = 0; i < s.length(); i++) {
-
-            if (s.charAt(i) == 'M') a[i] = 1000;
-            if (s.charAt(i) == 'D') a[i] = 500;
-            if (s.charAt(i) == 'C') a[i] = 100;
-            if (s.charAt(i) == 'L') a[i] = 50;
-            if (s.charAt(i) == 'X') a[i] = 10;
-            if (s.charAt(i) == 'V') a[i] = 5;
-            if (s.charAt(i) == 'I') a[i] = 1;
-
+            a[i]=map.get(s.charAt(i));
         }
 
         for (int i = 0; i < s.length(); i++)
