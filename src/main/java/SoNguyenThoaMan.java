@@ -26,8 +26,7 @@ public class SoNguyenThoaMan {
 
         for (int i = 10; i < 100000; i++) {
             dem = timSoMu(i, dem);
-            int kq = tinhKq(i, dem);
-            if (kq == i) s += i + " ";
+            if (tinhKq(i, dem) == i) s += i + " ";
 
         }
 
