@@ -28,7 +28,7 @@ public class KiemTraTamGiacBai16 {
             double p = c / 2;
             double area = Math.sqrt(p * (p - a[0]) * (p - a[1]) * (p - a[2]));
 
-            String result = "S=" + area + ", C=" + C + ", tam giác là tam giác";
+            String result = "S=" + area + ", C=" + c + ", tam giác là tam giác";
             if (a[2] * a[2] == a[0] * a[0] + a[1] * a[1]) {
 
                 result += " vuông";
