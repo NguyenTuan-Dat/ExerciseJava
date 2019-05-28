@@ -1,8 +1,11 @@
 public class SoNguyenThoaMan {
 
-    int timSoMu(int a, int dem) {
-
-        if (a % Math.pow(10, dem) == 0) dem++;
+    int timSoMu(int a) {
+        int dem = 1;
+        while (a >= 10) {
+            dem++;
+            a /= 10;
+        }
 
         return dem;
     }
@@ -22,11 +25,9 @@ public class SoNguyenThoaMan {
     public String find() {
 
         String s = "";
-        int dem = 2;
 
         for (int i = 10; i < 100000; i++) {
-            dem = timSoMu(i, dem);
-            if (tinhKq(i, dem) == i) s += i + " ";
+            if (tinhKq(i, timSoMu(i)) == i) s += i + " ";
 
         }
 
