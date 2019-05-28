@@ -6,6 +6,6 @@ public class Array2 {
 
         Arrays.sort(a, Collections.reverseOrder());
 
-        return a[0]+a[1]+a[2];
+        return a[0] + a[1] + a[2];
     }
 }
