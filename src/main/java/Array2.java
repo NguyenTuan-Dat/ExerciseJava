@@ -1,8 +1,11 @@
+
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 
 public class Array2 {
 
-    public int sum(int a[]) {
+    public int sum(Integer[] a) {
 
         Arrays.sort(a, Collections.reverseOrder());
 

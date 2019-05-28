@@ -4,7 +4,7 @@ import org.junit.Test;
 public class Array2Test {
     @Test
     public void test_sum(){
-        int a[]={5,4,2,1,3};
+        Integer a[]={5,4,2,1,3};
         Assert.assertEquals(new Array2().sum(a),12);
     }
 }
