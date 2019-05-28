@@ -10,16 +10,18 @@ public class SoNguyenThoaMan {
         return dem;
     }
 
-    int tinhKq(int a, int dem) {
+    boolean isPerfectNumber(int a) {
 
+        int mu = timSoMu(a);
+        int n = a;
         int kq = 0;
-        while (a > 0) {
-            int x = a % 10;
-            a /= 10;
-            kq += Math.pow(x, dem);
+        while (n > 0) {
+            int x = n % 10;
+            n /= 10;
+            kq += Math.pow(x, mu);
         }
-
-        return kq;
+        if (a == kq) return true;
+        else return false;
     }
 
     public String find() {
@@ -27,7 +29,7 @@ public class SoNguyenThoaMan {
         String s = "";
 
         for (int i = 10; i < 100000; i++) {
-            if (tinhKq(i, timSoMu(i)) == i) s += i + " ";
+            if (isPerfectNumber(i)) s += i + " ";
 
         }
 
