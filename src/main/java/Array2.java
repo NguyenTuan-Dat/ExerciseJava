@@ -4,13 +4,8 @@ public class Array2 {
 
     public int sum(int a[]) {
 
-        Arrays.sort(a);
-        int kq = 0;
+        Arrays.sort(a, Colection.reverseOrder());
 
-        for (int i = a.length - 3; i < a.length; i++) {
-            kq += a[i];
-        }
-
-        return kq;
+        return a[0]+a[1]+a[2];
     }
 }
