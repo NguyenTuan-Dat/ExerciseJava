@@ -16,14 +16,15 @@ public class Array18 {
 
         for (int j1 = 0; j1 < m; j1++) {
             for (int i1 = 0; i1 < n; i1++) {
-                int j2 = j1;
-                for (int i2 = i1; i2 < n; i2++) {
+                int j2 = j1, i2=i1;
+                while (true){
                     if (a[i1][j1] > a[i2][j2]) swap(i1, j1, i2, j2);
                     if (i2 == n - 1) {
                         i2 = -1;
                         j2++;
                         if (j2 == m) break;
                     }
+                    i2++;
                 }
             }
         }
