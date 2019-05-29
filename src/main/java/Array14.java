@@ -7,7 +7,7 @@ public class Array14 {
         int m = a.length;
         int count = 0;
         int dem = 0;
-        while (count < (a.length+1)/ 2) {
+        while (true) {
 
             for (int i = count; i < n - count; i++) {
                 b[dem++] = a[count][i];
