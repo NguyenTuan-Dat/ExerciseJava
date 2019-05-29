@@ -15,7 +15,7 @@ public class Array14 {
             if(dem == b.length) break;
 
             for (int i = count + 1; i < m - count; i++) {
-                b[dem++] = a[i][n - 1];
+                b[dem++] = a[i][n - 1 - count];
             }
 
             for (int i = n - count - 2; i >= count; i--) {
