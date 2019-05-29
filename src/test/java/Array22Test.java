@@ -10,10 +10,12 @@ public class Array22Test {
         int d[][] = {{1, 2}, {4, 5}, {10, 11}};
         int e[][] = {{2, 3}, {5, 6}, {11, 12}};
         int f[][] = {{4, 5}, {7, 8}, {10, 11}};
+        int g[][] = {{1, 3}, {4, 6}, {10, 12}};
         Assert.assertArrayEquals(new Array22().xoaHangXoaCot(a, 0, 0), b);
         Assert.assertArrayEquals(new Array22().xoaHangXoaCot(a, 1, 2), c);
         Assert.assertArrayEquals(new Array22().xoaHangXoaCot(a, 2, 2), d);
         Assert.assertArrayEquals(new Array22().xoaHangXoaCot(a, 2, 0), e);
         Assert.assertArrayEquals(new Array22().xoaHangXoaCot(a, 0, 2), f);
+        Assert.assertArrayEquals(new Array22().xoaHangXoaCot(a, 2, 1), g);
     }
 }
