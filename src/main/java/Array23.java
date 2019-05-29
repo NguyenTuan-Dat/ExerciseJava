@@ -3,7 +3,7 @@ public class Array23 {
     public int tongDaySoTuNhien(int a[]) {
 
         int b[] = new int[a.length];
-        if (b[0] >= 0) b[0] = a[0];
+        if (b[0] > 0) b[0] = a[0];
         else b[0] = 0;
 
         for (int i = 1; i < b.length; i++) {
