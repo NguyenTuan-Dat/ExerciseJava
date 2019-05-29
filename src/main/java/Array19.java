@@ -10,7 +10,6 @@ public class Array19 {
             for (int i = count; i < n - count; i++) {
                 a[count][i] = c[dem++];
             }
-            if (dem == n * m) break;
 
             for (int i = count + 1; i < m - count; i++) {
                 a[i][n - count - 1] = c[dem++];
@@ -19,6 +18,7 @@ public class Array19 {
             for (int i = n - count - 2; i >= count; i--) {
                 a[m - count - 1][i] = c[dem++];
             }
+            if (dem == n * m) break;
 
             for (int i = m - count - 2; i > count; i--) {
                 a[i][count] = c[dem++];
