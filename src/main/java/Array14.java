@@ -17,7 +17,6 @@ public class Array14 {
             for (int i = count + 1; i < m - count; i++) {
                 b[dem++] = a[i][n - 1];
             }
-            if(dem == b.length) break;
 
             for (int i = n - count - 2; i >= count; i--) {
                 b[dem++] = a[m - count - 1][i];
@@ -27,7 +26,6 @@ public class Array14 {
             for (int i = m - count - 2; i > count; i--) {
                 b[dem++] = a[i][count];
             }
-            if(dem == b.length) break;
 
             count++;
         }
