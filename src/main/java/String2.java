@@ -10,8 +10,7 @@ public class String2 {
             boolean x = true;
             for(int j=0; j<b[i].length(); j++){
                 char test = b[i].charAt(j);
-                if (test >='a' && test <='z' || test>='A' && test<='Z'
-                        || test>='0' && test<='9'){}
+                if (test >='a' && test <='z' || test>='0' && test<='9'){}
                 else {
                     x=false;
                     break;
