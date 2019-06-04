@@ -5,9 +5,10 @@ public class Array11Test {
     
     @Test
     public void test_swap() {
-        int c[] = {3,2,1};
-        Assert.assertArrayEquals(new Array11().swap(false,0),c);
-    
+        int c[] = {3, 2, 1};
+        Assert.assertArrayEquals(new Array11().swap(false, 0), c);
+    }
+
     @Test
     public void test_swapEvenAndOdd() {
         int a[] = {1, 2, 4, 5, 6, 7, 8, 10};
