@@ -24,10 +24,8 @@ public class Array6 {
         a = b;
 
         for (int i = 0; i < a.length; i++) {
-            boolean dk;
-            if (a[i] % 2 == 0) dk = true;
-            else dk = false;
-            swapV2(dk, i);
+            if (a[i] % 2 == 0) swapV2(true, i);
+            else swapV2(false, i);
         }
 
         return a;
