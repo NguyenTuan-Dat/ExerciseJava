@@ -14,10 +14,10 @@ public class String4 {
         for (int i = a.length() - 1; i >= 0; i--) {
             int themso = nho + a.charAt(i) + b.charAt(i) - 2 * '0';
 
-            if (themso % 10 > 0) {
+            if (themso / 10 > 0) {
                 nho = themso / 10;
                 themso %= 10;
-            }
+            } else nho = 0;
 
             kq = themso + kq;
         }
