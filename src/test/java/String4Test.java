@@ -16,5 +16,6 @@ public class String4Test {
         Assert.assertEquals(new String4().tinhTong("12","2"),"14");
         Assert.assertEquals(new String4().tinhTong("14","5"),"19");
         Assert.assertEquals(new String4().tinhTong("14","7"),"21");
+        Assert.assertEquals(new String4().tinhTong("14","87"),"101");
     }
 }
