@@ -8,6 +8,7 @@ public class String4Test {
         Assert.assertEquals(new String4().sum("12 asd2.6aasadsadsdasd"), "20");
         Assert.assertEquals(new String4().sum("82 asd2.7"), "91");
         Assert.assertEquals(new String4().sum("2 asd32.5"), "39");
+        Assert.assertEquals(new String4().sum("abc 123 def 33 mn 3.221"), "380");
     }
 
     @Test
