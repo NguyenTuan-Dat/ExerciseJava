@@ -5,7 +5,7 @@ public class String4Test {
     @Test
     public void test_sum(){
         Assert.assertEquals(new String4().sum("12 asd2.5"), "19");
-        Assert.assertEquals(new String4().sum("12 asd2.6aa"), "20");
+        Assert.assertEquals(new String4().sum("12 asd2.6aasadsadsdasd"), "20");
         Assert.assertEquals(new String4().sum("82 asd2.7"), "91");
         Assert.assertEquals(new String4().sum("2 asd32.5"), "39");
     }

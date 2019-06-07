@@ -38,7 +38,7 @@ public class String4 {
                 c += a.charAt(i);
             }
 
-            if (!isDigit || (i == a.length() - 1 && isDigit)) {
+            if ((!isDigit || (i == a.length() - 1 && isDigit)) && !c.equals("")) {
                 result = tinhTong(result, c);
                 c = "";
             }
