@@ -44,6 +44,6 @@ public class String4 {
             }
         }
 
-        return result.toString();
+        return result;
     }
 }
