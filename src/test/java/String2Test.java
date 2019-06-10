@@ -5,6 +5,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class String2Test {
+
+    @Test
+    public void test_isWord(){
+        Assert.assertEquals(new String2().isWord("asdsadsd2"),true);
+        Assert.assertEquals(new String2().isWord("asd[]asd"), false);
+    }
+
     @Test
     public void test_tu(){
         String a = "asd 343adasd asdgh763-304";
