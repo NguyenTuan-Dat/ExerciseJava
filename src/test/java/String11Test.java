@@ -26,6 +26,9 @@ public class String11Test {
         String d = "222123/1111";
         Assert.assertEquals(new String11().tinh(d),199);
 
+        String h = "5^2";
+        Assert.assertEquals(new String11().tinh(h),25);
+
         String e = "5<<2";
         Assert.assertEquals(new String11().tinh(e),20);
 
