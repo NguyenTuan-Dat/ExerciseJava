@@ -8,8 +8,8 @@ public class String2Test {
 
     @Test
     public void test_isWord(){
-        Assert.assertEquals(new String2().isWord("asdsadsd2"),true);
-        Assert.assertEquals(new String2().isWord("asd[]asd"), false);
+        Assert.assertTrue(new String2().isWord("asdsadsd2"));
+        Assert.assertFalse(new String2().isWord("asd[]asd"));
     }
 
     @Test
