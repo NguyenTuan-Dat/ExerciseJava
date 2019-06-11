@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class String11 {
 
     public int[] tachSo(String a) {
