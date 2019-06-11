@@ -3,7 +3,9 @@ public class String17 {
     public String tinhHieu(String a, String b) {
         StringBuilder c = new StringBuilder("");
 
-        if (a.compareTo(b) < 0) return "-" + tinhHieu(b, a);
+        if (a.length() < b.length() || (a.length() == b.length() && a.compareTo(b) < 0)) {
+            return "-" + tinhHieu(b, a);
+        }
 
         a = new StringBuffer(a).reverse().toString();
         b = new StringBuffer(b).reverse().toString();
@@ -23,6 +25,10 @@ public class String17 {
             }
 
             c.append(kq);
+        }
+
+        for(int i=c.length()-1; i>0; i--){
+            if (c.charAt(i)=='0') c.deleteCharAt(i);
         }
 
         return c.reverse().toString();
