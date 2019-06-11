@@ -6,6 +6,8 @@ public class String10Test {
     public void test_khaiTrien() {
         String a = "ab14c5a";
         String b = "abbbbbbbbbbbbbbccccca";
-        Assert.assertEquals(new String10().khaiTrien(a), b);
+        String c = "ab14c5";
+        String d = "abbbbbbbbbbbbbbccccc";
+        Assert.assertEquals(new String10().khaiTrien(c), d);
     }
 }
