@@ -2,7 +2,7 @@ public class String15 {
     public int findVerifyNumber(String a) {
         int test = 0;
 
-        while (test <= 9) {
+        while (true) {
             int chan = 0;
             int le = 0;
             for (int i = 0; i < a.length(); i += 2) {
