@@ -29,6 +29,7 @@ public class String17 {
 
         for(int i=c.length()-1; i>0; i--){
             if (c.charAt(i)=='0') c.deleteCharAt(i);
+            else break;
         }
 
         return c.reverse().toString();
