@@ -1,30 +1,32 @@
 public class Array21 {
 
+    public int[][] xoaHangXoaCot(int a[][], int x, int y) {
+
+        int[][] b = new int[a.length - 1][a[0].length - 1];
+
+        for (int i = 0; i < b.length; i++) {
+            for (int j = 0; j < b[0].length; j++) {
+                int k = 0, l = 0;
+                if (i >= x) k = 1;
+                if (j >= y) l = 1;
+                b[i][j] = a[i + k][j + l];
+            }
+        }
+
+        return b;
+    }
+
     public int det(int a[][]) {
 
         int kq = 0;
-        int[][] b = new int[a.length + 2][a.length];
-
-        for (int i = 0; i < a.length + 2; i++) {
-            for (int j = 0; j < a.length; j++) {
-                if (i < a.length) b[i][j] = a[i][j];
-                else b[i][j]=a[i-a.length][j];
+        int dau = -1;
+        if(a.length==1) return a[0][0];
+        else {
+            for(int i=0; i<a.length; i++){
+                dau*=-1;
+                kq+= dau*a[i][0]*det(xoaHangXoaCot(a,i,0));
             }
+            return kq;
         }
-
-        for(int i=0; i<a.length; i++){
-            int s=1;
-            for(int j=0; j<a.length; j++){
-                s*=b[i+j][j];
-            }
-            kq+=s;
-            s=1;
-            for(int j=a.length-1; j>=0; j--){
-                s*=b[a.length-1+i-j][j];
-            }
-            kq-=s;
-        }
-
-        return kq;
     }
 }
