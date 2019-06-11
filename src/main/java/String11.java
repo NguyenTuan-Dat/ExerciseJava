@@ -2,17 +2,16 @@ public class String11 {
 
     public int[] tachSo(String a) {
         String[] x = a.split("[\\+\\-\\*\\/\\^\\<\\>]");
-        if (x.length > 2) {
-            if (x[1].equals("")) x[1] = x[2];
-        }
 
-        int result[] = new int[x.length];
+        int result[] = new int[2];
+        int dem=0;
 
         for (int i = 0; i < x.length; i++) {
+            if(x[i].equals("")) continue;
             for (int j = 0; j < x[i].length(); j++) {
-                if (x[i].charAt(j) != '<' && x[i].charAt(j) != '>')
-                    result[i] = result[i] * 10 + x[i].charAt(j) - '0';
+                    result[dem] = result[dem] * 10 + x[i].charAt(j) - '0';
             }
+            dem++;
         }
 
         return result;
