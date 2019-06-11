@@ -1,7 +1,7 @@
 public class String11 {
 
     public int[] tachSo(String a) {
-       return Arrays.stream(a.split("[+\\-*/^<>]"))
+       return Arrays.stream(a.split("[\\+\\-\\*\\/\\^\\<\\>]"))
                 .filter(t -> !t.equals(""))
                 .mapToInt(Integer::valueOf)
                 .toArray();
