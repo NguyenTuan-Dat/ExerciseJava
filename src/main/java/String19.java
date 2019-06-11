@@ -70,12 +70,12 @@ public class String19 {
     }
 
     public String tinhThuong(String a, String b) {
-        if (a.length() < b.length() || (a.length()==b.length() && a.compareTo(b)<0)) return "0";
+        if (a.length() < b.length() || (a.length() == b.length() && a.compareTo(b) < 0)) return "0";
         String result = "";
         String c = a.substring(0, b.length());
         int local = b.length();
         if (b.compareTo(c) > 0) c += a.charAt(local++);
-        String aphay=c;
+        String aphay = c;
 
         do {
             int dem = 0;
@@ -83,10 +83,10 @@ public class String19 {
                 c = tinhHieu(c, b);
                 dem++;
                 System.out.println(c);
-            } while ((c.length() > b.length() || (b.length()==c.length() && c.compareTo(b) >= 0)));
+            } while ((c.length() > b.length() || (b.length() == c.length() && c.compareTo(b) >= 0)));
 
             result += String.valueOf(dem);
-            if(c.charAt(0)=='-') break;
+            if (c.charAt(0) == '-') break;
 
             while (c.length() < b.length() || (c.length() == b.length() && c.compareTo(b) < 0)) {
                 if (local >= a.length()) break;
@@ -94,9 +94,9 @@ public class String19 {
             }
 
             System.out.println("c=" + c);
-            System.out.println("result= " +result);
+            System.out.println("result= " + result);
             System.out.println("local= " + local);
-        } while ((c.compareTo(b) >= 0 && c.length()== b.length()) || c.length()>b.length());
+        } while ((c.compareTo(b) >= 0 && c.length() == b.length()) || c.length() > b.length());
 
         return result;
     }
