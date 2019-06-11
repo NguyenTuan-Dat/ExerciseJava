@@ -1,20 +1,10 @@
 public class String11 {
 
     public int[] tachSo(String a) {
-        String[] x = a.split("[\\+\\-\\*\\/\\^\\<\\>]");
-
-        int result[] = new int[2];
-        int dem=0;
-
-        for (int i = 0; i < x.length; i++) {
-            if(x[i].equals("")) continue;
-            for (int j = 0; j < x[i].length(); j++) {
-                    result[dem] = result[dem] * 10 + x[i].charAt(j) - '0';
-            }
-            dem++;
-        }
-
-        return result;
+       return Arrays.stream(a.split("[+\\-*/^<>]"))
+                .filter(t -> !t.equals(""))
+                .mapToInt(Integer::valueOf)
+                .toArray();
     }
 
     public int tinh(String a) {
