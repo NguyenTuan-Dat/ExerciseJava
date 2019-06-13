@@ -30,9 +30,12 @@ public class Triangle {
 
         if (c[0] == c[2]) return "Deu";
         else {
-            if (c[0] == c[1] && c[2] * c[2] == c[0] * c[0] + c[1] * c[1]) return "Vuong Can";
+            if (c[0] == c[1] && Math.abs(c[2]*c[2]-c[0]*c[0]-c[1]*c[1])<0.00001) return "Vuong Can";
             else{
-                if(c[0]==c[1] || c[1]==c[2]) return "Can";
+                if(c[0]==c[1] || c[1]==c[2]){
+                    for(int i=0; i<3; i++) System.out.println(c[2]*c[2] + " " + (c[0] * c[0] + c[1] * c[1]));
+                    return "Can";
+                }
                 else{
                     if(c[2] * c[2] == c[1] * c[1] + c[0] * c[0]) return "Vuong";
                     else return "Thuong";
