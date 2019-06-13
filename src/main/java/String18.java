@@ -1,4 +1,4 @@
-public class String19 {
+public class String18 {
     public String tinhTong(String a, String b) {
         String kq = "";
         if (b.length() > a.length()) {
@@ -53,7 +53,6 @@ public class String19 {
 
         for (int i = c.length() - 1; i > 0; i--) {
             if (c.charAt(i) == '0') c.deleteCharAt(i);
-            else break;
         }
 
         return c.reverse().toString();
@@ -67,34 +66,5 @@ public class String19 {
         } while (!(b = tinhHieu(b, "1")).equals("0"));
 
         return c;
-    }
-
-    public String tinhThuong(String a, String b) {
-        if (a.length() < b.length() || (a.length() == b.length() && a.compareTo(b) < 0)) return "0";
-        String result = "";
-        String c = a.substring(0, b.length());
-        int local = b.length();
-        if (b.compareTo(c) > 0) c += a.charAt(local++);
-        String aphay = c;
-
-        do {
-
-            int dem = 0;
-            do {
-                c = tinhHieu(c, b);
-                dem++;
-                System.out.println(c);
-            } while ((c.length() > b.length() || (b.length() == c.length() && c.compareTo(b) >= 0)));
-
-            result += String.valueOf(dem);
-
-            while (c.length() < b.length() || (c.length() == b.length() && c.compareTo(b) < 0)) {
-                if (local >= a.length()) break;
-                c += a.charAt(local++);
-            }
-            
-        } while ((c.compareTo(b) >= 0 && c.length() == b.length()) || c.length() > b.length());
-
-        return result;
     }
 }
