@@ -58,12 +58,12 @@ public class String18 {
         return c.reverse().toString();
     }
 
-    public String tinhTich(String a, String b){
-        if (a.length()<b.length()) return tinhTich(b,a);
+    public String tinhTich(String a, String b) {
+        if (a.length() < b.length()) return tinhTich(b, a);
         String c = "0";
         do {
-            c = tinhTong(c,a);
-        }while(!(b=tinhHieu(b,"1")).equals("0"));
+            c = tinhTong(c, a);
+        } while (!(b = tinhHieu(b, "1")).equals("0"));
 
         return c;
     }
