@@ -11,7 +11,7 @@ public class OOP1Test {
         Assert.assertEquals(b.getType(), "Vuong Can");
         Triangle c = new Triangle(0,0,1.5,3,2,0);
         Assert.assertEquals(c.getType(), "Thuong");
-        Triangle d = new Triangle(0,0,1,1,2,0);
+        Triangle d = new Triangle(0,0,1,0.5,2,0);
         Assert.assertEquals(d.getType(), "Can");
         Triangle e = new Triangle(0,0,1,7,2,0);
         Assert.assertEquals(e.getType(), "Can");
