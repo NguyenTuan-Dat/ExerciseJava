@@ -77,27 +77,39 @@ public class OOP2Test {
         Circle b = null;
         Shape c = new Quadrilateral(0, 0, 0, 4, 6, 4, 6, 0);
         Circle d = new Circle(1, 1, 3);
+        Circle d1 = new Circle(0, 0, 3);
         assertTrue(a.equals(a));
         assertFalse(a.equals(b));
         assertFalse(a.equals(c));
         assertFalse(a.equals(d));
+        assertFalse(a.equals(d1));
 
         Triangle e = new Triangle(0, 0, 1, 1, 2, 2);
         Triangle f = null;
         Triangle g = new Triangle(1, 1, 0, 5, 2, 1);
+        Triangle g1 = new Triangle(0, 0, 0, 5, 2, 1);
+        Triangle g2 = new Triangle(0, 0, 1, 1, 2, 1);
         assertTrue(e.equals(e));
         assertFalse(e.equals(f));
         assertFalse(e.equals(c));
         assertFalse(e.equals(g));
+        assertFalse(e.equals(g1));
+        assertFalse(e.equals(g2));
 
         Quadrilateral h = new Quadrilateral(1,2,3,4,5,6,7,8);
         Quadrilateral i = null;
         Quadrilateral k = new Quadrilateral(3,1,2,5,1,4,8,8);
+        Quadrilateral k1 = new Quadrilateral(1,2,2,5,1,4,8,8);
+        Quadrilateral k2 = new Quadrilateral(1,2,3,4,1,4,8,8);
+        Quadrilateral k3 = new Quadrilateral(1,2,3,4,5,6,8,8);
         Shape l = new Circle(0,0,3);
         assertTrue(h.equals(h));
         assertFalse(h.equals(i));
         assertFalse(h.equals(l));
         assertFalse(h.equals(k));
+        assertFalse(h.equals(k1));
+        assertFalse(h.equals(k2));
+        assertFalse(h.equals(k3));
     }
 
     @Test
