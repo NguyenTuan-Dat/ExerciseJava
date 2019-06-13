@@ -30,8 +30,7 @@ public class Triangle {
 
         if (c[0] == c[2]) return "Deu";
         else {
-            if (c[0] == c[1] || c[1] == c[2]
-                    && c[2] * c[2] == c[0] * c[0] + c[1] * c[1]) return "Vuong Can";
+            if (c[0] == c[1] && c[2] * c[2] == c[0] * c[0] + c[1] * c[1]) return "Vuong Can";
             else{
                 if(c[0]==c[1] || c[1]==c[2]) return "Can";
                 else{
