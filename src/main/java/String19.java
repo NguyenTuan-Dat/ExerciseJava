@@ -78,6 +78,7 @@ public class String19 {
         String aphay = c;
 
         do {
+
             int dem = 0;
             do {
                 c = tinhHieu(c, b);
@@ -93,9 +94,6 @@ public class String19 {
                 c += a.charAt(local++);
             }
 
-            System.out.println("c=" + c);
-            System.out.println("result= " + result);
-            System.out.println("local= " + local);
         } while ((c.compareTo(b) >= 0 && c.length() == b.length()) || c.length() > b.length());
 
         return result;
