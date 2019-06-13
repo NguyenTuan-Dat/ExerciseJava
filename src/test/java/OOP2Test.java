@@ -42,6 +42,9 @@ public class OOP2Test {
         Quadrilateral c = new Quadrilateral(0, 0, 0, 4, 6, 4, 6, 0);
         Assert.assertEquals(c.getArea(), 24.0, 0.00001);
 
+        Quadrilateral d = new Quadrilateral(0, 0, 0, 2, 1, 2, 1, -1);
+        Assert.assertEquals(d.getArea(), 2.5, 0.00001);
+
     }
 
     @Test
@@ -73,7 +76,7 @@ public class OOP2Test {
         Circle a = new Circle(0, 0, 4);
         Circle b = null;
         Shape c = new Quadrilateral(0, 0, 0, 4, 6, 4, 6, 0);
-        Circle d = new Circle(0, 0, 3);
+        Circle d = new Circle(1, 1, 3);
         assertTrue(a.equals(a));
         assertFalse(a.equals(b));
         assertFalse(a.equals(c));
@@ -81,7 +84,7 @@ public class OOP2Test {
 
         Triangle e = new Triangle(0, 0, 1, 1, 2, 2);
         Triangle f = null;
-        Triangle g = new Triangle(0, 0, 1, 1, 2, 1);
+        Triangle g = new Triangle(1, 1, 0, 5, 2, 1);
         assertTrue(e.equals(e));
         assertFalse(e.equals(f));
         assertFalse(e.equals(c));
@@ -89,7 +92,7 @@ public class OOP2Test {
 
         Quadrilateral h = new Quadrilateral(1,2,3,4,5,6,7,8);
         Quadrilateral i = null;
-        Quadrilateral k = new Quadrilateral(1,2,3,4,5,6,8,8);
+        Quadrilateral k = new Quadrilateral(3,1,2,5,1,4,8,8);
         Shape l = new Circle(0,0,3);
         assertTrue(h.equals(h));
         assertFalse(h.equals(i));
