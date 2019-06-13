@@ -76,7 +76,7 @@ public class OOP2Test {
         Circle a = new Circle(0, 0, 4);
         Circle b = null;
         Shape c = new Quadrilateral(0, 0, 0, 4, 6, 4, 6, 0);
-        Circle d = new Circle(1, 1, 3);
+        Circle d = new Circle(1, 1, 4);
         Circle d1 = new Circle(0, 0, 3);
         assertTrue(a.equals(a));
         assertFalse(a.equals(b));
