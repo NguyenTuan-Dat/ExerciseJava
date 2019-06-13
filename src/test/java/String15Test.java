@@ -4,7 +4,6 @@ import org.junit.Test;
 public class String15Test {
     @Test
     public void test_findVerifyNumber(){
-        Assert.assertEquals(new String15().findVerifyNumber("89385059741x4"), 9);
-        Assert.assertEquals(new String15().findVerifyNumber("8938505974x94"), 1);
+        Assert.assertEquals(new String15().findVerifyNumber("893850597419x"), 4);
     }
 }
