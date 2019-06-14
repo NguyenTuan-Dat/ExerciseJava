@@ -46,6 +46,7 @@ public class OOP3Test {
         Assert.assertTrue(b.equals(b));
         Assert.assertFalse(b.equals(a));
         Assert.assertFalse(b.equals(f));
+        Assert.assertFalse(f.equals(b));
     }
 
     @Test
@@ -101,6 +102,7 @@ public class OOP3Test {
         List<Student> b = a.findByName("La", "Trinh");
         List<Student> f = a.findByName("La", "Tri");
         List<Student> e = a.findByName("Le", "Trinh");
+        List<Student> g = a.findByName("Le", "Trin");
         Student.StudentBuilder c = new Student.StudentBuilder(2, "La", "Trinh");
         c.setClassName("17TCLC2");
         c.setAddress("asdasd");
@@ -114,6 +116,7 @@ public class OOP3Test {
         }
         Assert.assertTrue(f.isEmpty());
         Assert.assertTrue(e.isEmpty());
+        Assert.assertTrue(g.isEmpty());
     }
 
     @Test
