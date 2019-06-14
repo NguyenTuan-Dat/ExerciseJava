@@ -48,7 +48,7 @@ public class StudentController {
         List<Student> result = new ArrayList<>();
         for (int i = 0; i < students.size(); i++) {
             Student a = students.get(i);
-            if (a.getFisrtName() == fN && a.getLastName() == lN) result.add(a);
+            if (a.getFisrtName().equals(fN) && a.getLastName().equals(lN)) result.add(a);
         }
         return result;
     }
@@ -57,7 +57,7 @@ public class StudentController {
         List<Student> result = new ArrayList<>();
         for (int i = 0; i < students.size(); i++) {
             Student a = students.get(i);
-            if (a.getClassName() == cN) result.add(a);
+            if (a.getClassName().equals(cN)) result.add(a);
         }
         return result;
     }

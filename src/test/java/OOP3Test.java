@@ -140,7 +140,7 @@ public class OOP3Test {
         d.add(e.build());
         d.add(c.build());
 
-        for (int i = 0; i < b.size(); i++) {
+        for (int i = 0; i < d.size(); i++) {
             Assert.assertTrue(b.get(i).equals(d.get(i)));
         }
 
