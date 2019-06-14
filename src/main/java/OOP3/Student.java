@@ -52,6 +52,7 @@ public class Student {
         if (!(b instanceof Student)) {
             return false;
         }
+
         Student s = (Student) b;
         return s.id == this.id;
     }

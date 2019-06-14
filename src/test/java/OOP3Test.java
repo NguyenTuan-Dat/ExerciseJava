@@ -36,10 +36,16 @@ public class OOP3Test {
         Student d = c.build();
         Student e = a.getById(6);
 
+        Student.StudentBuilder f = new Student.StudentBuilder(1, "Nguyen", "Dat");
+        f.setClassName("17TCLC2");
+        f.setAddress("dfgd");
+        f.setBirthday("21/03/1999");
+
         Assert.assertTrue(b.equals(d));
         Assert.assertFalse(b.equals(e));
         Assert.assertTrue(b.equals(b));
         Assert.assertFalse(b.equals(a));
+        Assert.assertFalse(b.equals(f));
     }
 
     @Test
@@ -58,7 +64,7 @@ public class OOP3Test {
         c.setBirthday("04/05/1999");
         a.addStudent(c.build());
 
-        a.addStudent(3, "Hoang", "Hieu", "04/07/1999", "17TCLC2", "asdasdasda");
+        a.addStudent(3, "Hoang", "Hieu", "04/07/1999", "12A2", "asdasdasda");
 
         a.saveToFile();
     }
