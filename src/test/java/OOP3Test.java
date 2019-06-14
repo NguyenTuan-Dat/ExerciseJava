@@ -99,6 +99,8 @@ public class OOP3Test {
         a.loadFromFile();
 
         List<Student> b = a.findByName("La", "Trinh");
+        List<Student> f = a.findByName("La", "Tri");
+        List<Student> e = a.findByName("Le", "Trinh");
         Student.StudentBuilder c = new Student.StudentBuilder(2, "La", "Trinh");
         c.setClassName("17TCLC2");
         c.setAddress("asdasd");
@@ -110,6 +112,8 @@ public class OOP3Test {
         for (int i = 0; i < b.size(); i++) {
             Assert.assertTrue(b.get(i).equals(d.get(i)));
         }
+        Assert.assertTrue(f.isEmpty());
+        Assert.assertTrue(e.isEmpty());
     }
 
     @Test
@@ -135,5 +139,8 @@ public class OOP3Test {
         for (int i = 0; i < b.size(); i++) {
             Assert.assertTrue(b.get(i).equals(d.get(i)));
         }
+
+        List<Student> f = a.findByClassName("17TCLC1");
+        Assert.assertTrue(f.isEmpty());
     }
 }
