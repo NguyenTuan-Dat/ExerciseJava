@@ -57,7 +57,7 @@ public class StudentController {
         List<Student> result = new ArrayList<>();
         for (int i = 0; i < students.size(); i++) {
             Student a = students.get(i);
-            if (a.getFisrtName() == cN) result.add(a);
+            if (a.getClassName() == cN) result.add(a);
         }
         return result;
     }

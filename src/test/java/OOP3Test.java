@@ -40,12 +40,13 @@ public class OOP3Test {
         f.setClassName("17TCLC2");
         f.setAddress("dfgd");
         f.setBirthday("21/03/1999");
+        Student g = f.build();
 
         Assert.assertTrue(b.equals(d));
         Assert.assertFalse(b.equals(e));
         Assert.assertTrue(b.equals(b));
         Assert.assertFalse(b.equals(a));
-        Assert.assertFalse(b.equals(f));
+        Assert.assertFalse(b.equals(g));
         Assert.assertFalse(f.equals(b));
     }
 
