@@ -3,15 +3,20 @@ import org.junit.Test;
 
 public class String19Test {
     @Test
-    public void test_tinhThuong(){
-        Assert.assertEquals(new String19().tinhThuong("492","12"),"41");
-        Assert.assertEquals(new String19().tinhThuong("487","18"),"27");
+    public void test_tinhThuong() {
+        Assert.assertEquals(new String19().tinhThuong("492", "12"), "41");
+        Assert.assertEquals(new String19().tinhThuong("487", "18"), "27");
+        Assert.assertEquals(new String19().tinhThuong("503", "18"), "27");
+        Assert.assertEquals(new String19().tinhThuong("499", "100"), "4");
+        Assert.assertEquals(new String19().tinhThuong("500", "1000"), "0");
+        Assert.assertEquals(new String19().tinhThuong("500", "600"), "0");
+        Assert.assertEquals(new String19().tinhThuong("147", "18"), "8");
     }
 
     @Test
-    public void test_tinhTich(){
-        Assert.assertEquals(new String19().tinhTich("22","48"),"1056");
-        Assert.assertEquals(new String19().tinhTich("2","4023"),"8046");
+    public void test_tinhTich() {
+        Assert.assertEquals(new String19().tinhTich("22", "48"), "1056");
+        Assert.assertEquals(new String19().tinhTich("2", "4023"), "8046");
     }
 
     @Test
