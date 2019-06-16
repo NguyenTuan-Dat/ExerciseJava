@@ -17,6 +17,7 @@ public class OOP4Test {
         Assert.assertEquals(a.next().getVal(),2);
     }
 
+    @Test
     public void test_StackNumber(){
         StackNumber a = new StackNumber();
 
