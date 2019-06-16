@@ -21,6 +21,7 @@ public class OOP5Test {
     public  void test_Queue(){
         Queue a = new Queue();
 
+        Assert.assertEquals(a.deQueue(),-1);
         Assert.assertTrue(a.isEmpty());
         a.enQueue(1);
         Assert.assertFalse(a.isEmpty());
