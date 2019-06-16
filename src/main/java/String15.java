@@ -4,7 +4,7 @@ public class String15 {
 
         int chan = 0;
         int le = 0;
-        for (int i = 0; i < a.length()-1; i += 2) {
+        for (int i = 0; i < a.length() - 1; i += 2) {
             le += a.charAt(i) - '0';
         }
 
@@ -12,11 +12,6 @@ public class String15 {
             chan += a.charAt(i) - '0';
         }
 
-        while (true) {
-            if ((le + test + 3*chan)%10==0) break;
-            test++;
-        }
-
-        return test;
+        return (10 - (le + chan * 3) % 10) % 10;
     }
 }
