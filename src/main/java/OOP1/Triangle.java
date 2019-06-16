@@ -3,7 +3,17 @@ package OOP1;
 import java.util.Arrays;
 
 public class Triangle {
-    double x1, x2, x3, y1, y2, y3;
+    private double x1;
+
+    private double x2;
+
+    private double x3;
+
+    private double y1;
+
+    private double y2;
+
+    private double y3;
 
     public Triangle(double x1, double y1, double x2, double y2, double x3, double y3) {
         this.x1 = x1;
@@ -30,33 +40,33 @@ public class Triangle {
 
         if (c[0] == c[2]) return "Deu";
         else {
-            if (c[0] == c[1] && Math.abs(c[2]*c[2]-c[0]*c[0]-c[1]*c[1])<0.00001) return "Vuong Can";
-            else{
-                if(c[0]==c[1] || c[1]==c[2]) return "Can";
-                else{
-                    if(c[2] * c[2] == c[1] * c[1] + c[0] * c[0]) return "Vuong";
+            if (c[0] == c[1] && Math.abs(c[2] * c[2] - c[0] * c[0] - c[1] * c[1]) < 0.00001) return "Vuong Can";
+            else {
+                if (c[0] == c[1] || c[1] == c[2]) return "Can";
+                else {
+                    if (c[2] * c[2] == c[1] * c[1] + c[0] * c[0]) return "Vuong";
                     else return "Thuong";
                 }
             }
         }
     }
 
-    public double getPerimeter(){
+    public double getPerimeter() {
         double c[] = new double[3];
         c[0] = canh(x1, y1, x2, y2);
         c[1] = canh(x1, y1, x3, y3);
         c[2] = canh(x3, y3, x2, y2);
 
-        return c[1]+c[2]+c[0];
+        return c[1] + c[2] + c[0];
     }
 
-    public double getArea(){
+    public double getArea() {
         double c[] = new double[3];
         c[0] = canh(x1, y1, x2, y2);
         c[1] = canh(x1, y1, x3, y3);
         c[2] = canh(x3, y3, x2, y2);
-        double p = getPerimeter()/2;
+        double p = getPerimeter() / 2;
 
-        return Math.sqrt(p*(p-c[0])*(p-c[1])*(p-c[2]));
+        return Math.sqrt(p * (p - c[0]) * (p - c[1]) * (p - c[2]));
     }
 }
