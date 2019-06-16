@@ -92,7 +92,6 @@ public class String19 {
                 if (local >= a.length()) break;
                 c += a.charAt(local++);
             }
-            
         } while ((c.compareTo(b) >= 0 && c.length() == b.length()) || c.length() > b.length());
 
         return result;
