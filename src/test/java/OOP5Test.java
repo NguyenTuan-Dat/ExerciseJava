@@ -6,41 +6,41 @@ import org.junit.Test;
 public class OOP5Test {
     @Test
     public void test_Node() {
-        Node a = new Node(1);
-        a.setNext(new Node(2));
+        Node node = new Node(1);
+        node.setNext(new Node(2));
 
-        Assert.assertEquals(a.getVal(), 1);
+        Assert.assertEquals(node.getVal(), 1);
 
-        a.setVal(4);
-        Assert.assertEquals(a.getVal(), 4);
+        node.setVal(4);
+        Assert.assertEquals(node.getVal(), 4);
 
-        Assert.assertEquals(a.next().getVal(), 2);
+        Assert.assertEquals(node.next().getVal(), 2);
     }
 
     @Test
     public  void test_Queue(){
-        Queue a = new Queue();
+        Queue queue = new Queue();
 
-        Assert.assertEquals(a.deQueue(),-1);
-        Assert.assertTrue(a.isEmpty());
-        a.enQueue(1);
-        Assert.assertFalse(a.isEmpty());
+        Assert.assertEquals(queue.deQueue(),-1);
+        Assert.assertTrue(queue.isEmpty());
+        queue.enQueue(1);
+        Assert.assertFalse(queue.isEmpty());
 
-        Assert.assertEquals(a.getSize(),1);
+        Assert.assertEquals(queue.getSize(),1);
 
-        Assert.assertEquals(a.getFront(),1);
+        Assert.assertEquals(queue.getFront(),1);
 
-        a.enQueue(3);
-        a.enQueue(2);
+        queue.enQueue(3);
+        queue.enQueue(2);
 
-        Queue b = new Queue();
+        Queue queue1 = new Queue();
 
-        b.enQueue(1);
-        b.enQueue(3);
-        b.enQueue(2);
+        queue1.enQueue(1);
+        queue1.enQueue(3);
+        queue1.enQueue(2);
 
-        for(int i=0; i<a.getSize(); i++){
-            Assert.assertEquals(a.deQueue(),b.deQueue());
+        for(int i=0; i<queue.getSize(); i++){
+            Assert.assertEquals(queue.deQueue(),queue1.deQueue());
         }
     }
 }

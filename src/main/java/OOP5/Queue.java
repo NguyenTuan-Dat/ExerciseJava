@@ -27,22 +27,22 @@ public class Queue {
     }
 
     public void enQueue(int a) {
-        Node x = new Node(a);
+        Node node = new Node(a);
         if (this.size == 0) {
-            this.front = x;
-            this.end = x;
+            this.front = node;
+            this.end = node;
         } else {
-            this.end.setNext(x);
-            this.end = x;
+            this.end.setNext(node);
+            this.end = node;
         }
         this.size++;
     }
 
     public int deQueue() {
         if(size == 0) return -1;
-        int x = this.front.getVal();
+        int val = this.front.getVal();
         this.front = this.front.next();
         this.size--;
-        return x;
+        return val;
     }
 }
