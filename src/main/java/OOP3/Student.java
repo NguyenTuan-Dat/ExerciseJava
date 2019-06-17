@@ -8,13 +8,13 @@ public class Student {
     private String className;
     private String address;
 
-    private Student(StudentBuilder s) {
-        this.id = s.id;
-        this.fisrtName = s.fisrtName;
-        this.lastName = s.lastName;
-        this.birthday = s.birthday;
-        this.className = s.className;
-        this.address = s.address;
+    private Student(StudentBuilder studentBuilder) {
+        this.id = studentBuilder.id;
+        this.fisrtName = studentBuilder.fisrtName;
+        this.lastName = studentBuilder.lastName;
+        this.birthday = studentBuilder.birthday;
+        this.className = studentBuilder.className;
+        this.address = studentBuilder.address;
     }
 
     public long getId() {
@@ -42,18 +42,18 @@ public class Student {
     }
 
     @Override
-    public boolean equals(Object b) {
-        if (b == null) {
+    public boolean equals(Object obj) {
+        if (obj == null) {
             return false;
         }
-        if (b == this) {
+        if (obj == this) {
             return true;
         }
-        if (!(b instanceof Student)) {
+        if (!(obj instanceof Student)) {
             return false;
         }
 
-        Student s = (Student) b;
+        Student s = (Student) obj;
         return s.id == this.id;
     }
 

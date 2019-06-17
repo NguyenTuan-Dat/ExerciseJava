@@ -22,13 +22,13 @@ public class StudentController {
         this.saveToFile();
     }
 
-    public void addStudent(Student s) throws IOException {
-        Student student = new Student.StudentBuilder(s.getId(), s.getFisrtName(), s.getLastName())
-                .setBirthday(s.getBirthday())
-                .setClassName(s.getClassName())
-                .setAddress(s.getAddress())
+    public void addStudent(Student student) throws IOException {
+        Student build = new Student.StudentBuilder(student.getId(), student.getFisrtName(), student.getLastName())
+                .setBirthday(student.getBirthday())
+                .setClassName(student.getClassName())
+                .setAddress(student.getAddress())
                 .build();
-        students.add(student);
+        students.add(build);
         this.saveToFile();
     }
 
@@ -47,9 +47,9 @@ public class StudentController {
     }
 
     public Student getById(long id) {
-        for (int i = 0; i < students.size(); i++) {
-            if (students.get(i).getId() == id) {
-                return students.get(i);
+        for (Student i : students) {
+            if (i.getId() == id) {
+                return i;
             }
         }
         return null;
@@ -57,18 +57,16 @@ public class StudentController {
 
     public List<Student> findByName(String firstName, String lastName) {
         List<Student> result = new ArrayList<>();
-        for (int i = 0; i < students.size(); i++) {
-            Student a = students.get(i);
-            if (a.getFisrtName().equals(firstName) && a.getLastName().equals(lastName)) result.add(a);
+        for (Student i : students) {
+            if (i.getFisrtName().equals(firstName) && i.getLastName().equals(lastName)) result.add(i);
         }
         return result;
     }
 
     public List<Student> findByClassName(String className) {
         List<Student> result = new ArrayList<>();
-        for (int i = 0; i < students.size(); i++) {
-            Student a = students.get(i);
-            if (a.getClassName().equals(className)) result.add(a);
+        for (Student i : students) {
+            if (i.getClassName().equals(className)) result.add(i);
         }
         return result;
     }
@@ -97,6 +95,8 @@ public class StudentController {
         if (!(obj instanceof StudentController)) return false;
 
         StudentController studentController = (StudentController) obj;
+
+        if(this.students.size()!=studentController.students.size()) return false;
 
         for (int i = 0; i < this.students.size(); i++) {
             if (!this.students.get(i).equals(studentController.students.get(i))) return false;

@@ -225,5 +225,7 @@ public class OOP3Test {
         Assert.assertFalse(a.equals(a.getById(1)));
         b.deleteStudentById(1);
         Assert.assertFalse(a.equals(b));
+        b.addStudent(3, "Hoang", "Hieu", "04/07/1999", "12A2", "asdasdasda");
+        Assert.assertFalse(a.equals(b));
     }
 }
