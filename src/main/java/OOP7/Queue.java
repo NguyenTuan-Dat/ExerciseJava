@@ -8,7 +8,6 @@ public class Queue<T> {
     private int size;
 
     public Queue() {
-        this.size = 0;
         this.end = null;
         this.front = null;
     }
@@ -22,8 +21,7 @@ public class Queue<T> {
     }
 
     public boolean isEmpty() {
-        if (this.size == 0) return true;
-        else return false;
+        return this.size == 0;
     }
 
     public void enQueue(T a) {
@@ -39,7 +37,7 @@ public class Queue<T> {
     }
 
     public T deQueue() {
-        if(this.isEmpty()) return null;
+        if (this.isEmpty()) return null;
         T val = this.front.getVal();
         this.front = this.front.next();
         this.size--;

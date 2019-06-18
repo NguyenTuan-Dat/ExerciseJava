@@ -4,42 +4,41 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class OOP7Test {
-
     @Test
-    public void test_Node(){
+    public void test_Node() {
         Node<Integer> a = new Node<Integer>(1);
         a.setNext(new Node<Integer>(2));
 
         Integer b = 1;
 
-        Assert.assertEquals(a.getVal(),b);
+        Assert.assertEquals(a.getVal(), b);
 
         a.setVal(4);
 
         Integer c = 4;
 
-        Assert.assertEquals(a.getVal(),c);
+        Assert.assertEquals(a.getVal(), c);
 
         Integer d = 2;
 
-        Assert.assertEquals(a.next().getVal(),d);
+        Assert.assertEquals(a.next().getVal(), d);
 
         Node<String> e = new Node<String>("asd");
         e.setNext(new Node<String>("123"));
 
         String f = "asd";
 
-        Assert.assertEquals(e.getVal(),f);
+        Assert.assertEquals(e.getVal(), f);
 
         e.setVal("dsa");
 
         String g = "dsa";
 
-        Assert.assertEquals(e.getVal(),g);
+        Assert.assertEquals(e.getVal(), g);
 
         String h = "123";
 
-        Assert.assertEquals(e.next().getVal(),h);
+        Assert.assertEquals(e.next().getVal(), h);
     }
 
     @Test
