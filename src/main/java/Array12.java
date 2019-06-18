@@ -1,20 +1,20 @@
 public class Array12 {
 
-    public static int[] chenMang(int a[],int x) {
+    public static int[] chenMang(int a[], int x) {
 
         int b[] = new int[a.length + 1];
         int j = 0;
-        for (int i = 0; i < a.length - 1; i++) {
-            if (a[i] < x && a[i + 1] >= x) {
+
+        for (int i = 0; i < a.length; i++) {
+            int soLon = i < a.length - 1 ? a[i + 1] : a[i];
+            if (a[i] <= x && x <= soLon && j == 0) {
                 b[i] = a[i];
-                i++;
-                b[i] = x;
+                b[i + 1] = x;
                 j = 1;
             } else {
-                b[i] = a[i - j];
+                b[i + j] = a[i];
             }
         }
-        b[b.length - 1] = a[a.length - 1];
 
         return b;
     }

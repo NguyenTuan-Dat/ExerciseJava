@@ -10,5 +10,11 @@ public class Array12Test {
         int c[] = {1,2,3,4,5};
         int d[] = {1,2,3,4,5,5};
         Assert.assertArrayEquals(new Array12().chenMang(c,5),d);
+        int e[] = {1,2,3,4,5};
+        int f[] = {1,1,2,3,4,5};
+        Assert.assertArrayEquals(new Array12().chenMang(e,1),f);
+        int g[] = {1,2,3,3,4,5};
+        int h[] = {1,2,3,3,3,4,5};
+        Assert.assertArrayEquals(new Array12().chenMang(g,3),h);
     }
 }
