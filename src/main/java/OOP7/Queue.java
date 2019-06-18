@@ -8,8 +8,6 @@ public class Queue<T> {
     private int size;
 
     public Queue() {
-        this.end = null;
-        this.front = null;
     }
 
     public int getSize() {
